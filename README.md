@@ -16,7 +16,12 @@ In order not to start from scratch, Tensorflow Model
 fancy feature detector for human postures. Its already pretrained. Features are in form
 of a vector which contains scores and positions of human body parts.
 
+Output from PoseNet blended into a original image:
+
+![Posture blended](/images/posture_skeleton_blended.png)
+
 ### Quality Estimation
+
 The features (the skeleton of the posture) is drawn to 256x256 RGB image and feed into a CNN which evaluates 
 the quality of the sitting pose by 6 categories. 
 * 0 no human posture at all
@@ -25,6 +30,11 @@ the quality of the sitting pose by 6 categories.
 * 3 average posture
 * 4 good posture
 * 5 very good posture
+
+Input for quality estimation:
+
+![Skeleton](/images/skeleton255_255.png)
+
 
 To train the second tensorflow model we need to provide a prerecorded/labeled data set:
 
@@ -76,6 +86,8 @@ Generate python source files from UI files:
 The PoseNet-Python implementation by Ross Wightman can be found at https://github.com/rwightman/posenet-python
 
 The original PoseNet model, weights, code, etc. was created by Google and can be found at https://github.com/tensorflow/tfjs-models/tree/master/posenet
+
+Images are license free from: https://www.pexels.com
 
 ### Nice to have / Nice to try out
 
