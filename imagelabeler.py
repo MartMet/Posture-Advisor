@@ -99,9 +99,9 @@ class ImageLabeler(QDialog):
         # enter key -> set quality label
         if event.key() == 16777220:
             self.on_set_label_button()
-        # escape key -> set no posture label
+        # escape key -> skip image
         if event.key() == 16777216:
             self.on_skip_button()
-        # space key -> set no posture label
+        # space key -> set no label
         if event.key() == 32:
             self.on_set_label_no_posture_button()
