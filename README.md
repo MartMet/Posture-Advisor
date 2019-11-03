@@ -26,7 +26,7 @@ the quality of the sitting pose by 6 categories.
 * 4 good posture
 * 5 very good posture
 
-To train the second tensorflow model we need to provide prerecorded/labeld data set:
+To train the second tensorflow model we need to provide a prerecorded/labeled data set:
 
 ### Providing a data set for training
 Providing a data set for training is a two step process:
@@ -50,15 +50,26 @@ You need to install at least the following prerequisites:
 * Tensorflow 2.0.0                      ```pip install tensorflow==2.0.0```
 * Numpy 1.16.4                          ```pip install numpy==1.16.4```
 * piexif 1.1.3                          ```pip install piexif==1.1.3```
+* invoke 1.3.0                          ```pip install invoke==1.3.0```
 
+'Invoke' is used as build management tool (similar to 'make').
+
+Generate python source files from UI files:
+```invoke generate``` 
 
 ## Usage
 
-* run the app by ```python postureadvisor.py```
+### Train the app
+
+* run the app by ```python postureadvisor.py --train```
 * [record] create data set by recording pictures of good/bad sitting postures
 * [label] label the quality of sitting postures in the previously created images
 * [train] start training the second tensorflow model, provide the number of epochs
 * [save model] save the trained model (outputfolder 'posturequalitynetmodel')
+
+### Run the app
+
+* run the app by ```python postureadvisor.py```
 
 ### Credits
 
@@ -67,6 +78,7 @@ The PoseNet-Python implementation by Ross Wightman can be found at https://githu
 The original PoseNet model, weights, code, etc. was created by Google and can be found at https://github.com/tensorflow/tfjs-models/tree/master/posenet
 
 ### Nice to have / Nice to try out
+
 * feed features directly into a MLP, without drawing on image plane
 * or instead: transfer learning for PoseNet to train custom features
 * add more options to train the quality estimation 

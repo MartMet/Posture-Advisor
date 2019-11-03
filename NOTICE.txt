@@ -1,0 +1,8 @@
+PoseNet Python Implementation in posenet\* is taken from https://github.com/rwightman/posenet-python
+Copyright 2018 Ross Wightman
+Modified (c) 2019 Martin Metzler
+
+Model in posenetmodel\*.pb is converted from TFJS. (https://github.com/tensorflow/tfjs-models/tree/master/posenet)
+Copyright 2018 Google LLC. All Rights Reserved.
+
+
