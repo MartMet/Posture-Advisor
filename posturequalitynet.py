@@ -85,7 +85,7 @@ class PostureQualityNet(QObject):
     def predict_on_raw_image(self, img):
         # detect skeleton image (features) first
         res = self.feature_detector.get_pose_from_image(img)
-        self.vanilla_predict(res[3])
+        return self.predict_on_skeleton_image(res[3])
 
     @Slot(list)
     def predict_on_skeleton_image(self, img):

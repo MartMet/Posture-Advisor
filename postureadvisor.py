@@ -113,7 +113,7 @@ class MainWindowTraining(AbstractMainWindow):
 
     def on_test_button(self):
         frame = self.image_acquisition.read_frame()
-        value = self.posture_quality_net.predict(frame)
+        value = self.posture_quality_net.predict_on_raw_image(frame)
         self.ui.lcdNumber.display(value)
 
     def on_load_model_button(self):
