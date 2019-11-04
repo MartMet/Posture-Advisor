@@ -31,6 +31,6 @@ def read_exif_tag_rating(filename):
             if (ifd_name=="0th"):
                 value = exif_dict[ifd_name][18246]
         except KeyError:
-            # if key not present we return 0
+            # if key not present we return None
             return None
     return value
